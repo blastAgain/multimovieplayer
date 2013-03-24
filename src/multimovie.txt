@@ -1,0 +1,6 @@
+" grid moviename transparency_mode
+10,a.mov,0
+10,u.jpg,0
+10,d.jpg,0
+10,l.jpg,0
+10,r.jpg,0
