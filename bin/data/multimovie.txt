@@ -1,4 +1,5 @@
-" grid moviename transparency_mode
+" grid moviename OF_BLENDMODE
+" blend mode
 "	OF_BLENDMODE_DISABLED = 0,
 "	OF_BLENDMODE_ALPHA 	  = 1,
 "	OF_BLENDMODE_ADD 	  = 2,
