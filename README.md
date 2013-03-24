@@ -25,7 +25,7 @@ movies and multimovie.txt which defines up to 9 movies composition and mesh grid
 
 example multimovieplayer.txt
 
-" grid moviename OF_BLENDMODE
+" grid moviename OF_BLENDMODE<br>
 "	OF_BLENDMODE_DISABLED = 0,
 "	OF_BLENDMODE_ALPHA 	  = 1,
 "	OF_BLENDMODE_ADD 	  = 2,
