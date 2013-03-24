@@ -1,0 +1,13 @@
+" grid moviename OF_BLENDMODE
+"	OF_BLENDMODE_DISABLED = 0,
+"	OF_BLENDMODE_ALPHA 	  = 1,
+"	OF_BLENDMODE_ADD 	  = 2,
+"	OF_BLENDMODE_SUBTRACT = 3,
+"	OF_BLENDMODE_MULTIPLY = 4,
+"	OF_BLENDMODE_SCREEN   = 5
+
+20,m1.mov,1,mov controllable
+20,u.jpg,2
+10,d.jpg,1
+10,l.jpg,4
+10,r.jpg,4
