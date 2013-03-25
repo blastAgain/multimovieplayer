@@ -21,6 +21,7 @@ class multiMovie{
     string moviefilename;
     int transparency;
     int endframe;
+    int loopstate;
 
 
 

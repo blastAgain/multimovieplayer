@@ -54,7 +54,7 @@ void testApp::readmovielist(){
         //Store strings into a custom container
         vector<string> words = ofSplitString(line, ",");
 
-        if(words.size()>=3){
+        if(words.size()>=4){
 
             multiMovie mm;
 
@@ -62,9 +62,12 @@ void testApp::readmovielist(){
             mm.grid = ofToInt(words[0]);
             mm.moviefilename = string(words[1]);
             mm.transparency= ofToInt(words[2]);
+            mm.loopstate= ofToInt(words[3]);
+
             mm.myMovie.loadMovie(mm.moviefilename);
             mm.myMovie.play();
             mm.endframe=mm.myMovie.getTotalNumFrames();
+            mm.myMovie.setLoopState((ofLoopType)mm.loopstate);
 
             //Save multiMovie
             mmovie.push_back(mm);
@@ -132,7 +135,10 @@ void testApp::udpsetup(){
 //--------------------------------------------------------------
 
 void testApp::exit(){
+
     ctlthread.stopThread();
+
+    /** \brief
     if(udpconnection.Close())
         ofLog(OF_LOG_ERROR,"Receive Socket closed");
     else
@@ -142,6 +148,7 @@ void testApp::exit(){
         ofLog(OF_LOG_ERROR,"Sending Socket closed");
     else
         ofLog(OF_LOG_ERROR,"Sending Socket close fail");
+     */
 
 
 }
@@ -149,6 +156,9 @@ void testApp::exit(){
 
 //--------------------------------------------------------------
 void testApp::setup(){
+
+    ofSetVerticalSync(true);
+	ofSetFrameRate(60);
 
     for(int i=0;i<mov_num;i++)
         mmovie[i].myMovie.play();
