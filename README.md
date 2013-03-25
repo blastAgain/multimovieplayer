@@ -24,26 +24,30 @@ movies and multimovie.txt which defines up to 9 movies composition and mesh grid
 <br>
 example multimovieplayer.txt<br>
 <br>
-" grid moviename OF_BLENDMODE<br><br>
+" grid moviename transparency_mode loopmode<br>
 "	OF_BLENDMODE_DISABLED = 0,<br>
 "	OF_BLENDMODE_ALPHA 	  = 1,<br>
 "	OF_BLENDMODE_ADD 	  = 2,<br>
 "	OF_BLENDMODE_SUBTRACT = 3,<br>
 "	OF_BLENDMODE_MULTIPLY = 4,<br>
 "	OF_BLENDMODE_SCREEN   = 5<br>
+"enum ofLoopType{<br>
+"	OF_LOOP_NONE=0x01,<br>
+"	OF_LOOP_PALINDROME=0x02,<br>
+"	OF_LOOP_NORMAL=0x03<br>
+
+20,m1.mov,1,1,mov controllable<br>
+20,u.jpg,2,2<br>
+10,d.jpg,2,3<br>
+10,l.jpg,4,3<br>
+10,r.jpg,4,1<br>
 <br>
-20,m1.mov,1,mov controllable<br>
-20,u.jpg,2<br>
-10,d.jpg,1<br>
-10,l.jpg,4<br>
-10,r.jpg,4<br>
-<br>
-program reads csv file and ignore 2 or less field line.<br>
+program reads csv file and ignore 3 or less field line.<br>
 so you can use as comment as above<br>
+more than 4th fields are ignored<br>
 <br>
-grid,moviename(or jpeg), OF_BLENDMODE<br>
-grid is number of mesh for bezierwarp<br>
-1~29<br>
+grid,moviename(or jpeg), OF_BLENDMODE(0-4), ofLoopType(1-3)<br>
+grid is number of mesh for bezierwarp(1-29)<br>
 only 1st line movie can controllable by keyboard or playctl program<br>
 <br>
 in this example other 4 movies are mask jpg (up, down, left, right)<br>
